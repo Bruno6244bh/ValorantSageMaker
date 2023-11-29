@@ -2,33 +2,68 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/colors.css">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valorant SageMaker</title>
 </head>
 <body>
 
-    <div class="header">
+    <header id="header">
+            
+        <h2 class="logo">SageMaker</h2>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">My Team</a>
+            <a href="#">Players</a>
+            <a href="#">Ranking</a>
+            <a href="#">Schedule</a>
+            <button class="btnLogin">LOGIN</button>
+        </nav>
+    </header>
 
-        <div class="logo">logo here</div>
-        <button class="profileButton">Profile</button>
+    <div class="container">
 
+        <div class="topSquad">
+
+            <h1>Squad of the week</h1><br>
+
+            <ol id="topSquad">
+                <li>
+                    <img src="../sources/aspas.pn" alt="">
+                    <h3 class="charName">Duelist</h3>
+                    <h3 class="player1Name">Aspas</h3>
+                </li>
+                <li>
+                    <img src="../sources/cauanzin.pn" alt="">
+                    <h3 class="charName">Initiator</h3>
+                    <h3 class="player2Name">Cauanzin</h3>
+                </li>
+                <li>
+                    <img src="../sources/saadhack.pn" alt="">
+                    <h3 class="charName">Flex</h3>
+                    <h3 class="player3Name">Saadhack</h3>
+                </li>
+                <li>
+                    <img src="../sources/less.pn" alt="">
+                    <h3 class="charName">Sentinel</h3>
+                    <h3 class="player4Name">Less</h3>
+                </li>
+                <li>
+                    <img src="../sources/pANcada.pn" alt="">
+                    <h3 class="charName">Controller</h3>
+                    <h3 class="player5Name">pANcada</h3>
+                </li>
+            </ol>
+        </div>
+
+        <div class="topScore"></div>
+
+        <div class="schedule"></div>
+        
     </div>
 
-    <div class="toolbar">
-        <button class="overviewButton">Overview</button>
-        <button class="myteamButton">My Team</button>
-        <button class="scheduleButton">Schedule</button>
-        <button class="rankingButton">Ranking</button>
-        <button class="playersButton">Players</button>
-    </div>
 
-    <div class="weekSquad"></div>
-
-    <div class="secondaryInfo"></div>
-
-    <div class="terciaryInfo"></div>
-    
-    <div class="footer"></div>
 </body>
 </html>

@@ -1,61 +1,163 @@
+@import url(colors.css);
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');
+
+
 *{
-    /* border: solid 1px red; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: 'Sometype Mono', monospace;
 }
 
 body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('../sources/ValorantBG1.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px 100px;
+    background-color: var(--color-red-second);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    border-bottom: 2px solid var(--color-white);
+    flex: 2;
+    
+}
+
+.logo {
+    font-size: 2em;
+    color: var(--color-white);
+    user-select: nones;
+    font-weight: 500;
+}
+
+.nav a {
+    position: relative;
+    font-size: 1.1em;
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--color-white);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.nav a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.nav .btnLogin {
+
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--color-white);
+    margin-left: 40px;
+    transition: .5s;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+.nav .btnLogin:hover {
+
+    background-color: var(--color-white);
+    color: var(--color-red-second);
+
+}
+
+.container {
+    background-color: var(--color-red-second);
+    margin-top: 60px;
+    width: 1200px;
+    height: calc(100vh - 60px);
+    z-index: 99;
+    border-right: 2px solid var(--color-white);
+    border-left: 2px solid var(--color-white);
     display: grid;
-    grid-template-rows: repeat(9, 1fr);
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: 
+    "squad squad"
+    "top schedule";
     gap: 20px;
 }
 
-.header{
-    grid-column-start: 1;
-    grid-column-end: 8;
-    grid-row-start: 1;
-    grid-row-end: 2;
+
+.topSquad {
+
+    background-color: var(--color-white);
+    grid-area: squad;
+    margin: 20px 20px 0px 20px;
+    z-index: 99;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.toolbar {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 9;
+.topScore {
+
+    background-color: var(--color-white); 
+    grid-area: top;
+    margin: 0px 0px 20px 20px;
+
 }
 
-.weekSquad {
-    grid-column-start: 2;
-    grid-column-end: 8;
-    grid-row-start: 2;
-    grid-row-end: 6;
+
+.schedule {
+
+    background-color: var(--color-white);
+    grid-area: schedule;
+    margin: 0px 20px 20px 0px;
+
 }
 
-.secondaryInfo {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 6;
-    grid-row-end: 9;
+#topSquad li {
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+
 }
 
-.terciaryInfo {
-    grid-column-start: 5;
-    grid-column-end: 8;
-    grid-row-start: 6;
-    grid-row-end: 9;
+#topSquad li img {
+    width: 120px;
+    height: 120px;
+    background-color: var(--color-grey-second);
+    border: solid 5px var(--color-red-second);
 }
 
-.footer {
-    grid-column-start: 1;
-    grid-column-end: 8;
-    grid-row-start: 9;
-    grid-row-end: 9;
+.topSquad h1 {
+    -webkit-text-stroke: 0.2px var(--color-red-second);
+    color: var(--color-white);
+    font-size: 48px;
 }
- div {
-
-    background-color: #5d5b5b;
- }
